@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="a9e7ae48-7cb4-4bb3-97b6-c2c35b793c5c" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="mule4firstapiFlow" doc:id="6aad6eef-65e6-4fc9-9526-454f9827153e" >
+		<http:listener doc:name="Listener" doc:id="294b7b1b-a7a7-4d29-970d-fdd30cfa200b" config-ref="HTTP_Listener_config" path="/api"/>
+		<set-payload value='#["Hi I am running on Mule runtime standalone"]' doc:name="Set Payload" doc:id="374970c7-89d8-4149-b7c9-3c75d0cfc60c" mimeType="text/plain"/>
+		<logger level="INFO" doc:name="Logger" doc:id="b5f366eb-92dd-4774-9c98-15335844535e" message="query params are  = #[attributes.queryParams.q1] , payload = #[payload]" category="Entry"/>
+	</flow>
+</mule>
