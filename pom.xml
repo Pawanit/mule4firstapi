@@ -14,7 +14,7 @@
     </properties>
     <build>
         <plugins>
-        <!-- 
+        
             <plugin>
                 <groupId>org.mule.tools.maven</groupId>
                 <artifactId>mule-maven-plugin</artifactId>
@@ -22,7 +22,7 @@
                 <extensions>true</extensions>
                 <configuration></configuration>
             </plugin>            
-             -->
+     
             <!-- Deploy to Cloudhub -->
             
             <plugin>
