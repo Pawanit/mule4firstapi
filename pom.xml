@@ -17,15 +17,38 @@
         
             <plugin>
                 <groupId>org.mule.tools.maven</groupId>
-                <artifactId>mule-app-maven-plugin</artifactId>
+                <artifactId>mule-maven-plugin</artifactId>
                 <version>${mule.maven.plugin.version}</version>
                 <extensions>true</extensions>
                 <configuration></configuration>
-            </plugin>
-            
+            </plugin>            
             
             <!-- Deploy to Cloudhub -->
+            
             <plugin>
+			   <groupId>org.mule.tools.maven</groupId>
+			   <artifactId>mule-maven-plugin</artifactId>
+			   <version>${mule.maven.plugin.version}</version>
+			   <extensions>true</extensions>
+			   <configuration>
+			      <cloudHubDeployment>
+			         <uri>https://anypoint.mulesoft.com</uri>
+			         <muleVersion>4.2.0</muleVersion>
+			         <username>pawankum</username>
+			         <password>Mulesoft123</password>
+			         <applicationName>mule4firstapi</applicationName>
+			         <environment>Sandbox</environment>
+			         <properties>
+			            <key>value</key>
+			         </properties>
+			      </cloudHubDeployment>
+			   </configuration>
+			</plugin>
+            
+            
+            
+            
+            <!-- <plugin>
                 <groupId>org.mule.tools.maven</groupId>
                 <artifactId>mule-maven-plugin</artifactId>
                 <version>${mule.maven.plugin.version}</version>
@@ -48,6 +71,13 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-deploy-plugin</artifactId>
+				<configuration>
+				<skip>true</skip>
+				</configuration>
+			</plugin> -->
         </plugins>
     </build>
     <dependencies>
