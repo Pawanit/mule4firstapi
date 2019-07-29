@@ -92,9 +92,7 @@
 								<password>Mulesoft123</password>
 								<applicationName>mule4firstapi</applicationName>
 								<environment>sandbox</environment>
-								<businessGroup>${anypoint.businessGroup}</businessGroup>
-								<region>${cloudhub.region}</region>
-								<uri>${anypoint.uri}</uri>
+								<uri>https://anypoint.mulesoft.com</uri>
 								<workerType>MICRO</workerType>
 								<workers>1</workers>
 							</cloudHubDeployment>
