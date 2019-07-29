@@ -24,7 +24,7 @@
             </plugin>            
      
             <!-- Deploy to Cloudhub -->
-            
+            <!--  
             <plugin>
 			   <groupId>org.mule.tools.maven</groupId>
 			   <artifactId>mule-maven-plugin</artifactId>
@@ -42,7 +42,7 @@
 			   </configuration>
 			</plugin>
             
-            
+            -->
             
             
             <!-- <plugin>
@@ -77,6 +77,42 @@
 			</plugin> -->
         </plugins>
     </build>
+    <profiles>
+    <profile>
+			<id>cloudhub</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.mule.tools.maven</groupId>
+						<artifactId>mule-maven-plugin</artifactId>
+						<configuration>
+							<cloudHubDeployment>
+								<muleVersion>4.2.0</muleVersion>
+								<username>pawankum</username>
+								<password>Mulesoft123</password>
+								<applicationName>mule4firstapi</applicationName>
+								<environment>sandbox</environment>
+								<businessGroup>${anypoint.businessGroup}</businessGroup>
+								<region>${cloudhub.region}</region>
+								<uri>${anypoint.uri}</uri>
+								<workerType>MICRO</workerType>
+								<workers>1</workers>
+							</cloudHubDeployment>
+						</configuration>
+						<executions>
+							<execution>
+								<id>deploy</id>
+								<phase>deploy</phase>
+								<goals>
+									<goal>deploy</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		</profiles>
     <dependencies>
         <dependency>
             <groupId>org.mule.connectors</groupId>
@@ -106,6 +142,10 @@
         </repository>
     </repositories>
     <pluginRepositories>
+    <pluginRepository>
+        <id>mule-public</id>
+        <url>https://repository.mulesoft.org/nexus/content/repositories/releases</url>
+    </pluginRepository>
         <pluginRepository>
             <id>mulesoft-releases</id>
             <name>mulesoft release repository</name>
