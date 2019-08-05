@@ -92,6 +92,7 @@
 								<password>Mulesoft123</password>
 								<applicationName>mule4firstapi</applicationName>
 								<environment>sandbox</environment>
+								<businessGroup>SFB_POC</businessGroup>
 								<uri>https://anypoint.mulesoft.com</uri>
 								<workerType>MICRO</workerType>
 								<workers>1</workers>
