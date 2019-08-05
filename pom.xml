@@ -20,7 +20,6 @@
                 <artifactId>mule-maven-plugin</artifactId>
                 <version>${mule.maven.plugin.version}</version> 
                 <extensions>true</extensions>
-                <configuration></configuration>
             </plugin>            
      
             <!-- Deploy to Cloudhub -->
@@ -101,7 +100,7 @@
             							</properties>
 							</cloudHubDeployment>
 						</configuration>
-					<!--	<executions>
+						<executions>
 							<execution>
 								<id>deploy</id>
 								<phase>deploy</phase>
@@ -109,7 +108,7 @@
 									<goal>deploy</goal>
 								</goals>
 							</execution>
-						</executions> -->
+						</executions>
 					</plugin>
 				</plugins>
 			</build>
