@@ -96,6 +96,9 @@
 								<uri>https://anypoint.mulesoft.com</uri>
 								<workerType>MICRO</workerType>
 								<workers>1</workers>
+								<properties>
+                							<key>value</key>
+            							</properties>
 							</cloudHubDeployment>
 						</configuration>
 						<executions>
