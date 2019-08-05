@@ -20,7 +20,36 @@
                 <artifactId>mule-maven-plugin</artifactId>
                 <version>${mule.maven.plugin.version}</version> 
                 <extensions>true</extensions>
-            </plugin>            
+            </plugin>
+	    <plugin>
+		<groupId>org.mule.tools.maven</groupId>
+		<artifactId>mule-maven-plugin</artifactId>
+		<configuration>
+			<cloudHubDeployment>
+				<muleVersion>4.2.0</muleVersion>
+				<username>pawankum</username>
+				<password>Mulesoft123</password>
+				<applicationName>mule4firstapi</applicationName>
+				<environment>sandbox</environment>
+				<businessGroup>SFB_POC</businessGroup>
+				<uri>https://anypoint.mulesoft.com</uri>
+				<workerType>MICRO</workerType>
+				<workers>1</workers>
+				<properties>
+					<key>value</key>
+				</properties>
+			</cloudHubDeployment>
+		</configuration>
+		<executions>
+			<execution>
+				<id>deploy</id>
+				<phase>deploy</phase>
+				<goals>
+					<goal>deploy</goal>
+				</goals>
+			</execution>
+		</executions>
+	</plugin>
      
             <!-- Deploy to Cloudhub -->
             <!--  
@@ -76,7 +105,7 @@
 			</plugin> -->
         </plugins>
     </build>
-    <profiles>
+<!--    <profiles>
     <profile>
 			<id>cloudhub</id>
 			<build>
@@ -113,7 +142,7 @@
 				</plugins>
 			</build>
 		</profile>
-		</profiles>
+		</profiles> -->
     <dependencies>
         <dependency>
             <groupId>org.mule.connectors</groupId>
