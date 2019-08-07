@@ -182,5 +182,12 @@
                 <enabled>false</enabled>
             </snapshots>
         </pluginRepository>
-    </pluginRepositories>
+    </pluginRepositories>	
+<distributionManagement>
+    <repository>
+      <id>corp1</id>
+      <name>locale-Repository</name>
+      <url>file:D:/local_repo</url>
+    </repository>
+  </distributionManagement>	
 </project>
