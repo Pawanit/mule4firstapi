@@ -197,7 +197,7 @@
 <distributionManagement>
     <repository>
         <id>releases</id>
-        <url>http://localhost:8080/my_repo/deploy/releases</url>
+        <url>http://localhost:8080/my_repo/deploy/releases/</url>
     </repository>
 <!--    <snapshotRepository>
         <id>snapshots</id>
