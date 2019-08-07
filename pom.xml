@@ -193,9 +193,8 @@
     </repository>
   </distributionManagement>	-->
 	
-	D:\apache-tomcat-8.5.43\my_repo\deploy
-	
-	<distributionManagement>
+
+<distributionManagement>
     <repository>
         <id>releases</id>
         <url>http://localhost:8080/my_repo/deploy/releases</url>
